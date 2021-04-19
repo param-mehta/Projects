@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    View Tables
+{% endblock %}
+<!-- <style>
+a:link, a:visited {
+  background-color: #38003C;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style> -->
+{% block style %}
+
+a.card-link{
+  background-color: #38003C;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+<!-- .card text-dark bg-light mb-3{
+  width: 10rem;
+} -->
+
+  <!-- a:link.car-link, a:visited.card-link {
+    background-color: #38003C;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover.card-link, a:active.card-link {
+    background-color: red;
+  } -->
+  {% endblock %}
+
+
+{% block main %}
+
+<!-- <img src="stadiums.JPG" alt="Card image cap"> row-cols-md-2 g-4 -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card text-dark bg-light mb-3" style="width: 32rem;">
+        <img class="card-img-top" src="/static/teams.png" alt="Card image cap" style="width:500px;height:200px;">
+        <div class="card-body">
+          <h6 class="card-title"><a href="/teams" class="card-link">Teams</a></h6>
+          <p class="card-text">Details of teams.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Unchanged since start of new season</small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+    <div class="card text-dark bg-light mb-3"style="width: 32rem;">
+      <img class="card-img-top" src="/static/coaches.png" alt="Card image cap" style="width:500px;height:200px;">
+      <div class="card-body">
+        <h6 class="card-title"><a href="/coaches" class="card-link">Coaches</a></h6>
+        <p class="card-text">Details of team coaches, their tenure and salaries.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Unchanged since start of new season</small>
+      </div>
+    </div>
+  </div>
+  </div>
+<br>
+<br>
+
+  <div class="row">
+      <div class="col">
+      <div class="card text-dark bg-light mb-3"style="width: 32rem;">
+        <img class="card-img-top" src="/static/players.png" alt="Card image cap" style="width:500px;height:200px;">
+        <div class="card-body">
+          <h6 class="card-title"><a href="/players" class="card-link">Players</a></h6>
+          <p class="card-text">Details about players, their ages, positions and salaries.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Unchanged since start of new season</small>
+        </div>
+      </div>
+      </div>
+
+        <div class="col">
+        <div class="card text-dark bg-light mb-3"style="width: 32rem;">
+          <img class="card-img-top" src="/static/stadiums.jpg" alt="Card image cap" style="width:500px;height:200px;">
+          <div class="card-body">
+            <h6 class="card-title"><a href="/stadiums" class="card-link">Stadiums</a></h6>
+            <p class="card-text">Details about team stadiums and capacities.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Unchanged since start of new season</small>
+          </div>
+        </div>
+        </div>
+        </div>
+<br>
+<br>
+  <div class="row">
+          <div class="col">
+          <div class="card text-dark bg-light mb-3"style="width: 32rem;">
+            <img class="card-img-top" src="/static/fix.jpg" alt="Card image cap" style="width:500px;height:200px;">
+            <div class="card-body">
+              <h6 class="card-title"><a href="/fixtures" class="card-link">Fixtures</a></h6>
+              <p class="card-text">Details about match schedules.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Unchanged since start of new season</small>
+            </div>
+          </div>
+          </div>
+
+            <div class="col">
+            <div class="card text-dark bg-light mb-3"style="width: 32rem;">
+              <img class="card-img-top" src="/static/scores.jpg" alt="Card image cap" style="width:500px;height:200px;">
+              <div class="card-body">
+                <h6 class="card-title"><a href="/scores" class="card-link">Scorecard</a></h6>
+                <p class="card-text">Final Scorelines of every match</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Updated recently</small>
+              </div>
+            </div>
+            </div>
+            </div>
+            <br>
+            <br>
+  <div class="row">
+              <div class="col">
+              <div class="card text-dark bg-light mb-3"style="width: 32rem;">
+                <img class="card-img-top" src="/static/poin.jpg" alt="Card image cap" style="width:500px;height:200px;">
+                <div class="card-body">
+                  <h6 class="card-title"><a href="/points" class="card-link">Points Table</a></h6>
+                  <p class="card-text">Leaderboard of the league</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Updated recently</small>
+                </div>
+              </div>
+              </div>
+              </div>
+              </div>
+
+</div>
+
+{% endblock %}

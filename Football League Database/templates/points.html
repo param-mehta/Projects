@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Points Table
+{% endblock %}
+{% block main %}
+
+<div class="container">
+  <h2>Points Table</h2>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Team ID</th>
+        <th>Team Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in res %}
+                <tr>
+                    <td>{{ row.Team_ID }}</td>
+                    <td>{{ row.Team_Name }}</td>
+                    <td>{{ row.Points }}</td>
+                </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

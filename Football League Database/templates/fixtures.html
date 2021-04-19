@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Fixtures
+{% endblock %}
+{% block main %}
+
+<div class="container">
+  <h2>Fixtures</h2>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Matchday</th>
+        <th>Home Team ID</th>
+        <th>Home Team</th>
+        <th>Away Team ID</th>
+        <th>Away Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in res %}
+                <tr>
+                  <td>{{ row.Matchday }}</td>
+                  <td>{{ row.Home_Team_ID }}</td>
+                  <td>{{ row.Home_Team }}</td>
+                  <td>{{ row.Away_Team_ID }}</td>
+                  <td>{{ row.Away_Team }}</td>
+                </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

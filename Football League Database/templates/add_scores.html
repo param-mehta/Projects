@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Scores
+{% endblock %}
+{% block main %}
+<h3> Add Scores </h3>
+<br>
+<form action="/add_scores" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="matchday" placeholder="Matchday" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="homeid" placeholder="Home ID" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="homescore" placeholder="Home Score" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="awayid" placeholder="Away ID" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="awayscore" placeholder="Away Score" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Score</button>
+    </form>
+
+
+{% endblock %}

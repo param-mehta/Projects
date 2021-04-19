@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block style %}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+{% endblock %}
+
+<!-- style="background-color:#fff7f8" -->
+
+{% block main %}
+<div class="card">
+  <div class="card-body">
+    <div class="container">
+      <h3>Matches Completed : {{matches}}</h3>
+      <div class="progress" style="height: 30px;">
+        <div class="progress-bar bg-info" role="progressbar" style="width: {{percent}}%" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100">{{percent}}%</div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br><br><br>
+<div class="container">
+  <h4>History</h4>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>Date of update</th>
+        <th>Matchday</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in hist %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.dateofchange }}</td>
+                    <td>{{ row.matchday }}</td>
+                </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Team Table
+{% endblock %}
+{% block main %}
+<body>
+<div class="container">
+  <h2>Teams</h2>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Team_ID</th>
+        <th>Name</th>
+        <th>Year_Established</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in res %}
+                <tr>
+                    <td>{{ row.Team_ID }}</td>
+                    <td>{{ row.Name }}</td>
+                    <td>{{ row.Year_Established }}</td>
+                </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

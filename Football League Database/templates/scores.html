@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Scores
+{% endblock %}
+{% block main %}
+
+<div class="container">
+  <h2>Scores</h2>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Matchday</th>
+        <th>Home Team ID</th>
+        <th>Home Team Score</th>
+        <th>Away Team ID</th>
+        <th>Away Team Score</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in res %}
+                <tr>
+                  <td>{{ row.Matchday }}</td>
+                  <td>{{ row.Home_Team_ID }}</td>
+                  <td>{{ row.Home_Score }}</td>
+                  <td>{{ row.Away_Team_ID}}</td>
+                  <td>{{ row.Away_Score }}</td>
+                </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

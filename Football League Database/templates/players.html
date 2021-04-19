@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Players
+{% endblock %}
+{% block main %}
+
+<div class="container">
+  <h2>Players</h2>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Player ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+        <th>Position</th>
+        <th>Team ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in res %}
+                <tr>
+                  <td>{{ row.Player_ID }}</td>
+                  <td>{{ row.F_Name }}</td>
+                  <td>{{ row.L_Name }}</td>
+                  <td>{{ row.Age }}</td>
+                  <td>{{ row.Salary }}</td>
+                  <td>{{ row.Position }}</td>
+                  <td>{{ row.Team_ID }}</td>
+                </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
