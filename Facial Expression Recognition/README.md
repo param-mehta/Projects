@@ -5,6 +5,8 @@
 
 <b>Data</b> : The data consisted of 48 x 48 grayscale images belonging to 8 different classes, all having nearly equal distributions.
 
+<b>Data source: </b> Kaggle
+
 <b>Approach</b>: Convolutional Neural network
 
 <b>Framework</b> : Pytorch
